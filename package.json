@@ -1,0 +1,24 @@
+{
+  "name": "typescript-pokeapi",
+  "version": "1.0.0",
+  "description": "PokeAPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoeW0/typescript-pokeapi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SoeW0/typescript-pokeapi/issues"
+  },
+  "homepage": "https://github.com/SoeW0/typescript-pokeapi#readme",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
