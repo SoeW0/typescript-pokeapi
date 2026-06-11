@@ -76,6 +76,7 @@ Funcionalidades
 - Adicionar Pokémon ao catálogo local
 - Exibir mensagens no terminal
 SAIDA:
+```JSON
 [
   {
     "id": 1,
@@ -125,3 +126,4 @@ SAIDA:
     "altura": 11,
     "peso": 190
   },
+```
