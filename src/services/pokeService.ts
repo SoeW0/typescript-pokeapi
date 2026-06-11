@@ -1,6 +1,6 @@
 import { fetchJSON } from "../utils/http";
-import { Pokemon } from "../models/Pokemon";
-import { PokeAPIListResponse, PokeAPIResponse } from "../models/PokeAPITypes";
+import { Pokemon } from "../models/pokemon";
+import { PokeAPIListResponse, PokeAPIResponse } from "../models/pokeApiTypes";
 
 const BASE_URL = "https://pokeapi.co/api/v2";
 
