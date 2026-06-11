@@ -1,10 +1,12 @@
 {
   "name": "typescript-pokeapi",
   "version": "1.0.0",
-  "description": "PokeAPI",
-  "main": "index.js",
+  "description": "Busca dados de Pokemons na PokeAPI",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "tsc && node dist/main.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   },
   "homepage": "https://github.com/SoeW0/typescript-pokeapi#readme",
   "devDependencies": {
+    "@types/node": "^25.9.3",
     "typescript": "^6.0.3"
   }
 }

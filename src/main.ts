@@ -1,11 +1,6 @@
-import * as fs from "fs";
-import * as path from "path";
+import { runPokemonController } from "./controllers/pokemonController";
 
-//Pokemon Interface
-interface pokemon {
-  id: number,
-  name: string,
-  type: string[],
-  height: number,
-  weight: number
-}
+runPokemonController().catch((err) => {
+  console.error("❌ Erro:", err.message);
+  process.exit(1);
+});
