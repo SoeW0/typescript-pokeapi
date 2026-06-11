@@ -30,11 +30,11 @@ export async function fetchAllPokemon(
   const names = await fetchPokemonList(limit);
   const pokemons: Pokemon[] = [];
 
-  for (let i = 0; i < names.length; i++) {
-    const name = names[i];
-    onProgress?.(i + 1, names.length, name);
+  let i = 0;
+  for (const name of names) {
+    onProgress?.(++i, names.length, name);
     const pokemon = await fetchPokemon(name);
-    pokemons.push(pokemon);
+    pokemon.push(pokemon);
   }
 
   return pokemons;
