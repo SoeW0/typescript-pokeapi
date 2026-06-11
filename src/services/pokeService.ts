@@ -34,7 +34,7 @@ export async function fetchAllPokemon(
   for (const name of names) {
     onProgress?.(++i, names.length, name);
     const pokemon = await fetchPokemon(name);
-    pokemon.push(pokemon);
+    pokemons.push(pokemon);
   }
 
   return pokemons;
