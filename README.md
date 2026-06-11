@@ -37,13 +37,20 @@ Antes de executar o projeto, é necessário ter instalado:
 Clone o repositório:
 ```bash
 git clone LINK_DO_REPOSITORIO
+```
 Acesse a pasta do projeto:
-cd pokedex-typescript-lite
+```bash
+cd typescript-pokeapi
+```
 Instale as dependências:
+```bash
 npm install
+```
 Como executar
 Execute o projeto em ambiente de desenvolvimento:
+```bash
 npm run dev
+```
 Estrutura do projeto
 typescript-pokeapi/
 ├── src/
