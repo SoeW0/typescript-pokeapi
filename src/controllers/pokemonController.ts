@@ -2,7 +2,8 @@ import { fetchAllPokemon } from "../services/pokeService";
 import { saveJSON } from "../utils/file";
 import path from "path";
 
-const OUTPUT_PATH = path.resolve(__dirname, "../../data/pokemons.json");
+//const OUTPUT_PATH = path.resolve(__dirname, "../../data/pokemons.json");
+const OUTPUT_PATH = path.resolve(__dirname, "../../pc_box.json");
 const LIMIT = 150;
 
 export async function runPokemonController(): Promise<void> {
