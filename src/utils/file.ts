@@ -1,9 +1,13 @@
-import fs from "fs/promise";
+import fs from "fs";
 import path from "path";
 
-export async function saveJson(filepath: string, data: unknown): Promise<void> {
-  const dir = path.dirname(filepath);
-  await fs.mkdir(dir, { recursive: true});
-  await fs.writeFile(filepath, JSON.stringfy(data, null, 2), "utf-8");
-  console.log(`Saved to ${filePath}`);
+export function saveJSON(filePath: string, data: unknown): void {
+  const dir = path.dirname(filePath);
+
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf-8");
+  console.log(`Dados salvos em: ${filePath}`);
 }
