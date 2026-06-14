@@ -46,10 +46,21 @@ Instale as dependências:
 ```bash
 npm install
 ```
+Compile o Programa:
+```bash
+npx tsc
+```
 Como executar
 Execute o projeto em ambiente de desenvolvimento:
 ```bash
-npm run dev
+//Adiciona Pokemon por ID ou Nome
+npm start -- add <nome/id>
+
+//Fetch geral na API
+npm run fetch
+
+//Remove Pokemon por ID
+npm start -- remove <id>
 ```
 Estrutura do projeto
 typescript-pokeapi/
