@@ -54,7 +54,7 @@ export function removePokemonFromBox(id: number): Pokemon {
     throw new Error(`Erro: nenhum pokémon com ID ${id} encontrado na pc_box.`);
   }
 
-  const removed = box[index];
+  const removed = box[index]!;
   box.splice(index, 1);
   saveJSON(OUTPUT_PATH, box);
   console.log(`"${removed.nome}" (ID ${removed.id}) removido da pc_box.`);
