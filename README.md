@@ -36,7 +36,7 @@ Antes de executar o projeto, é necessário ter instalado:
 ## Como instalar
 Clone o repositório:
 ```bash
-git clone LINK_DO_REPOSITORIO
+git clone https://github.com/SoeW0/typescript-pokeapi.git
 ```
 Acesse a pasta do projeto:
 ```bash
