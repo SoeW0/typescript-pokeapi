@@ -1,2 +1,5 @@
 # Ignore build files
 dist/
+
+# Ignore Dependencies
+node_modules/
