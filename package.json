@@ -6,7 +6,10 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/main.js",
-    "dev": "tsc && node dist/main.js"
+    "dev": "tsc && node dist/main.js",
+    "fetch": "node dist/main.js fetch",
+    "add": "node dist/main.js add",
+    "remove": "node dist/main.js remove"
   },
   "repository": {
     "type": "git",
