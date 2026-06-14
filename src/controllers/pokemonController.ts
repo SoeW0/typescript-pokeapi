@@ -46,10 +46,6 @@ export async function addPokemonToBox(idOrName: string | number): Promise<Pokemo
   return pokemon;
 }
 
-/**
- * Remove um pokémon da pc_box pelo ID.
- * Lança um erro se o ID não for encontrado.
- */
 export function removePokemonFromBox(id: number): Pokemon {
   const box = loadBox();
   const index = box.findIndex((p) => p.id === id);
@@ -58,7 +54,8 @@ export function removePokemonFromBox(id: number): Pokemon {
     throw new Error(`Erro: nenhum pokémon com ID ${id} encontrado na pc_box.`);
   }
 
-  const [removed] = box.splice(index, 1);
+  const removed = box[index];
+  box.splice(index, 1);
   saveJSON(OUTPUT_PATH, box);
   console.log(`"${removed.nome}" (ID ${removed.id}) removido da pc_box.`);
 
