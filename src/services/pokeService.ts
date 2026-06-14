@@ -23,6 +23,30 @@ export async function fetchPokemon(name: string): Promise<Pokemon> {
   };
 }
 
+export async function fetchPokemonByIdOrName(idOrName: string | number): Promise<Pokemon> {
+  const identifier = String(idOrName).trim().toLowerCase();
+
+  if (!identifier) {
+    throw new Error("É necessário informar um ID ou nome de pokémon.");
+  }
+
+  const url = `${BASE_URL}/pokemon/${identifier}`;
+
+  try {
+    const data = await fetchJSON<PokeAPIResponse>(url);
+
+    return {
+      id: data.id,
+      nome: data.name,
+      tipos: data.types.map((t) => t.type.name),
+      altura: data.height,
+      peso: data.weight,
+    };
+  } catch (err) {
+    throw new Error(`Pokémon "${idOrName}" não encontrado na PokéAPI.`);
+  }
+}
+
 export async function fetchAllPokemon(
   limit: number,
   onProgress?: (current: number, total: number, name: string) => void
