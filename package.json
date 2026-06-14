@@ -4,9 +4,9 @@
   "description": "Busca dados de Pokemons na PokeAPI",
   "main": "dist/main.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npx tsc",
     "start": "node dist/main.js",
-    "dev": "tsc && node dist/main.js",
+    "dev": "npx tsc && node dist/main.js",
     "fetch": "node dist/main.js fetch",
     "add": "node dist/main.js add",
     "remove": "node dist/main.js remove"
